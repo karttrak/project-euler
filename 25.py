@@ -1,5 +1,4 @@
 
-
 def fib(n):
 
 	a = b = 1
@@ -17,6 +16,5 @@ def fib(n):
 		j += 1
 
 		print(str(j) + ": " + str(size))
-		
 
 fib(100)
