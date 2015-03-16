@@ -1,4 +1,4 @@
-from lib import sorting_hat
+from lib import sorting_hat, structures
 
 def sort_ints():
 
@@ -39,11 +39,4 @@ def sort_letters(sentence):
 
 if __name__ == '__main__':
 
-	# sort_ints()
-
-	inp = input("")
-
-	while inp != "..":
-
-		print(sort_letters(inp))
-		inp = input("")
+	pass

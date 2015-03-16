@@ -1,43 +1,40 @@
-
+import math
 
 def get_factors(num):
 
 	factors = []
 
-	for j in range(1, int(num/2+1)):
+	for j in range(1, int(math.sqrt(num)+1)):
 
 		if num % j == 0:
 
 			factors.append(j)
+			mirror = int(num/j)
 
-		if j > 100 and len(factors) < 50:
+			if mirror != j:
+
+				factors.append(mirror)
+
+		if j > 100 and len(factors) < 100:
 
 			return []
-
-	factors.append(num)
 
 	return factors
 
 
 factor_count = 0
-j = 1
+n = 1
 
-while factor_count < 500:
+while factor_count < 5000:
 
-	triangle_sum = 0
-
-	for k in range(1, j+1):
-
-		triangle_sum += k
+	triangle_sum = int(n*(n+1)/2)
 
 	if triangle_sum % 2 == 0:
 
 		factor_count = len(get_factors(triangle_sum))
 
-		if factor_count > 100:
+		if factor_count >= 500:
 
 			print(str(triangle_sum) + " " + str(factor_count))
 	
-	j += 1
-
-print(get_factors(76576500))
+	n += 1

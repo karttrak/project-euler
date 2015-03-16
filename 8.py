@@ -1,4 +1,4 @@
-from lib import queue
+from lib import structures
 
 def get_product(q):
 
@@ -22,7 +22,7 @@ def get_contents(q):
 	return l
 
 
-q = queue.Queue(13)
+q = structures.Queue(13)
 
 maximum = (0,0)
 
