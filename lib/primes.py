@@ -48,7 +48,21 @@ def prime_list_up_to(num):
 
 	for i in range(3, num, 2):
 
-		if (is_prime(i)):
+		is_prime = True
+		lim = int(math.sqrt(i)) + 1
+
+		for p in primes:
+
+			if p > lim:
+
+				break
+
+			if i%p == 0:
+
+				is_prime = False
+				break
+
+		if is_prime:
 
 			primes.append(i)
 
@@ -75,4 +89,4 @@ if __name__ == '__main__':
 
 	# print(prime_factors(600851475143))
 	# print(is_prime(600851475143))
-	print(len(prime_list_up_to(100000)))
+	print(prime_list_up_to(1000000))
