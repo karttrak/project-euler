@@ -25,7 +25,7 @@ def get_factors(num):
 factor_count = 0
 n = 1
 
-while factor_count < 5000:
+while factor_count < 500:
 
 	triangle_sum = int(n*(n+1)/2)
 
@@ -33,7 +33,7 @@ while factor_count < 5000:
 
 		factor_count = len(get_factors(triangle_sum))
 
-		if factor_count >= 500:
+		if factor_count >= 300:
 
 			print(str(triangle_sum) + " " + str(factor_count))
 	
