@@ -36,6 +36,13 @@ class Queue:
 		self.q.append(obj)
 
 
+	def push_list(self, l):
+
+		for item in l:
+
+			self.push(item)
+
+
 	def pop(self):
 
 		return self.q.pop(0)
@@ -49,6 +56,13 @@ class Queue:
 	def to_list(self):
 
 		return self.q
+
+
+class Stack(Queue):
+
+	def pop(self):
+
+		return self.q.pop(len(self.q)-1)
 
 
 class Set:
@@ -123,4 +137,4 @@ class Set:
 
 if __name__ == '__main__':
 
-	test_queue()
+	pass
